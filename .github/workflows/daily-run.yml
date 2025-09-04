@@ -1,0 +1,33 @@
+name: Daily Python Script
+
+on:
+  schedule:
+    # Runs every day at midnight UTC
+    # For a different time, use a site like crontab.guru to generate the code
+    - cron: '50 21 * * *'
+  # This allows you to run the workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  run-script:
+    # The operating system to run the script on
+    runs-on: ubuntu-latest
+    steps:
+      # Step 1: Checks out your repository code
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Step 2: Sets up a Python environment
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      # Step 3: Installs any required libraries
+      # Only uncomment and use this if you have a requirements.txt file
+      # - name: Install dependencies
+      #   run: pip install -r requirements.txt
+
+      # Step 4: Runs your Python script
+      - name: Run my Python script
+        run: python my_script.py
