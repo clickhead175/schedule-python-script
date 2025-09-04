@@ -1,0 +1,89 @@
+import requests
+import time
+
+url = "https://canary.discord.com/api/v9/channels/1324315026768531466/messages"
+
+
+payload= {
+    "content" : "BPSJ05A5UG claim red packet 🧧🧧🧧🎁🎁 Pepe Last 49 🎁"
+}
+
+
+payload2 = {
+    "content" : "BTC Claim fast 8 people left 🎁 BPSJ05A5UG 🎁"
+}
+
+
+payload3 = {
+    "content" : "BPGCKJ5GOV 😍 10$ last 13 peoples 💗"
+}
+
+
+payload4 ={
+    "content" : "0.001 BTC 💗 😍 only for 216 💌 peoples BPVMGMZJP0"
+}
+
+
+payload5={
+    "content" : "137 😍🎖 DOGE Tokens last 19 red packet 💥🧧 BPGCKJ5GOV"
+}
+
+
+payload6={
+    "content" : "1.2 SOL 💗 For 121 peoples go claim 🎁🧧BPZHKLPEG9"
+}
+
+
+payload7={
+    "content" : "BPSJ05A5UG claim red packet 🧧🧧🧧🎁🎁 Pepe Last 49 🎁"
+}
+
+payload8 ={
+    "content" : "Best of luck for TON$ 💵🎉 BPYCHYLWT9"
+}
+
+payload9 ={
+    "content" : "0.65 BNB$ 🎟💖 only for 69 peoples claim 🎫 fast BPVMGMZJP0"
+}
+
+
+headers={
+    "Authorization" : "MTA0MTQzODQ4NTA3ODM0Nzg2Ng.GpW-xJ.teEbOV5cYKFvyhirCRxfYr9-kcw9eNeDJQP0-w"
+}
+
+
+res = requests.post(url,payload,headers=headers)
+
+
+time.sleep(30 * 62)
+
+
+res = requests.post(url,payload2,headers=headers)
+
+time.sleep(30 * 62)
+
+res = requests.post(url,payload3,headers=headers)
+
+time.sleep(30 * 62)
+
+res = requests.post(url,payload4,headers=headers)
+
+time.sleep(30 * 62)
+
+res = requests.post(url,payload5,headers=headers)
+
+time.sleep(30 * 62)
+
+res = requests.post(url,payload6,headers=headers)
+
+time.sleep(30 * 62)
+
+res = requests.post(url,payload7,headers=headers)
+
+time.sleep(30 * 62)
+
+res = requests.post(url,payload8,headers=headers)
+
+time.sleep(30 * 62)
+
+res = requests.post(url,payload9,headers=headers)
