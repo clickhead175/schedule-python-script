@@ -4,7 +4,7 @@ on:
   schedule:
     # Runs every day at midnight UTC
     # For a different time, use a site like crontab.guru to generate the code
-    - cron: '50 21 * * *'
+    - cron: '40 21 * * *'
   # This allows you to run the workflow manually from the Actions tab
   workflow_dispatch:
 
