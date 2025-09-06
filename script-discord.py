@@ -1,3 +1,4 @@
+import os
 import requests
 import time
 
@@ -35,8 +36,10 @@ payloads = [
     {"content": "‎‎‎738$ BNB BOX CODE 🎟🧧BPSJ05A5UG"},
     {"content": "‎‎‎‎BPYCHYLWT9 🧧🧧🧧🧧🎀🎁 25$"},
     {"content": "203 GUN 🎀 🧧🧧 171 people's can claim 🎟🎖red packet BPYCHYLWT9‎‎‎‎"}
-    
-]
+    ]
+
+DISCORD_TOKEN = os.getenv('DISCORD_TOKEN')
+
 
 # Headers for the request
 headers = {
