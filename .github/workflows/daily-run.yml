@@ -33,7 +33,7 @@ jobs:
 
       - name: Run Python script
         env:
-          DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}  # Pass the Discord token from Secrets
+          DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}  
         run: python script-discord.py
 
 
