@@ -5,7 +5,7 @@ on:
     branches:
       - main 
   schedule:
-    - cron: '0 0 * * *'  # Runs at midnight UTC every day (adjust as needed)
+    - cron: '0 10 * * *'  # Runs at midnight UTC every day (adjust as needed)
 
 jobs:
   post_to_discord:
