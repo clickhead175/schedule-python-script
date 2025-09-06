@@ -1,6 +1,5 @@
 name: Post to Discord
 
-# Trigger the workflow on a schedule (every day at a specific time)
 on:
   push:
     branches:
@@ -30,11 +29,27 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install requests
+        continue-on-error: true  # Allow failures here for debugging
+
+      - name: Debug Python environment
+        run: |
+          python --version  # Check the Python version
+          pip show requests  # Check if requests is installed
 
       - name: Run Python script
         env:
-          DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}  
-        run: python script-discord.py
+          DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}  # Pass the Discord token from Secrets
+        run: |
+          echo "Running Python script..."
+          python script-discord.py
+        continue-on-error: true  # Allow failures here for debugging
+
+      - name: Output error logs
+        if: failure()  # If the previous step failed, show error logs
+        run: |
+          echo "There was an error running the script"
+          tail -n 20 /home/runner/.bash_history  # Print the last 20 commands run for context
+
 
 
 
