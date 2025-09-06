@@ -1,9 +1,12 @@
 name: Post to Discord
 
+# Trigger the workflow on a schedule (every day at a specific time)
 on:
   push:
     branches:
       - main 
+  schedule:
+    - cron: '0 0 * * *'  # Runs at midnight UTC every day (adjust as needed)
 
 jobs:
   post_to_discord:
@@ -29,6 +32,9 @@ jobs:
           pip install requests
 
       - name: Run Python script
+        env:
+          DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}  # Pass the Discord token from Secrets
         run: python script-discord.py
+
 
 
