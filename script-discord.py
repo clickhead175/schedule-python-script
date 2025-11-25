@@ -43,7 +43,7 @@ DISCORD_TOKEN = os.getenv('DISCORD_TOKEN')
 
 # Headers for the request
 headers = {
-    "Authorization": "MTA0MTQzODQ4NTA3ODM0Nzg2Ng.GpW-xJ.teEbOV5cYKFvyhirCRxfYr9-kcw9eNeDJQP0-w"
+    "Authorization": "examplekey=uiuhuihijubiiuncw9eNeDJQP0-w78y8"
 }
 
 # Add this to repeatedly post every hour
